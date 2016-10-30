@@ -1,0 +1,4 @@
+services:
+#    shag.example:
+#        class: ShagBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
