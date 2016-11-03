@@ -74,7 +74,7 @@ fos_user:
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
-    use_controller: false
+    use_controller: true
     bundles:        [ 'ShagBundle' ]
 
     filters:
