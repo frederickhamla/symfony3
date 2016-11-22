@@ -1,0 +1,35 @@
+@import "mixins/colors";
+@import "mixins/fonts";
+@import "mixins/media-queries";
+
+.nav {
+  padding: 0;
+  margin: 150px 0 0 0;
+  background-color: @main;
+  line-height: 60px;
+  white-space: nowrap;
+
+  ul.nav-inline {
+    list-style: none;
+    text-align: center;
+
+    li {
+      border-right: 1px solid @main-lighter;
+      display: inline;
+
+      &:first-child {
+        border-left: 1px solid @main-lighter;
+      }
+
+      a {
+        text-decoration: none;
+        margin: 0 100px;
+        .league-main;
+
+        &:hover {
+          color: @main-darker;
+        }
+      }
+    }
+  }
+}
