@@ -8,51 +8,66 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/styles.css') }}">
 </head>
 <body>
-    <div class="container">
+    <div id="navbar" class="sidenav closebtn" onclick="closeNav()">
+        <ul>
+            <li>
+                <a href="#about-me" data-toggle="tooltip" title="Mais qui es-tu ?">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#my-skills" data-toggle="tooltip" title="Ce que je sais faire">
+                    <i class="fa fa-superpowers" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#my-works" data-toggle="tooltip" title="Mes travaux">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" data-toggle="tooltip" title="Me contacter">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
         <div class="header">
+            <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
         </div>
 
-        <div class="nav">
-            <ul class="nav-inline">
-                <li>
-                    <a href="" data-toggle="tooltip" title="Home">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="" data-toggle="tooltip" title="Réalisations">
-                        <i class="fa fa-laptop" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="" data-toggle="tooltip" title="Contact">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section-one">
-            <div class="section-img">
-                <div>
-                    <img class="img-presentation" src="http://fakeimg.pl/280x280/">
-                </div>
-            </div>
-
+        <div id="about-me" class="section-one">
             <div class="section-presentation">
-                <div class="txt-presentation">
-                    <h1 class="firstname">Frédérick</h1>
-                    <h1 class="lastname">Khamla</h1>
-                    <p>Never desire a shipmate.
-                        Donec lobortis, sapien ac mattis pellentesque, urna est pretium leo, at elementum ante turpis
-                        id lacus. Sed commodo enim nisl. Etiam eu libero bibendum, commodo risus et, convallis eros.
-                        Nam convallis leo in arcu rhoncus pellentesque. Interdum et malesuada fames ac ante ipsumt.
+                <h1>Frédérick KHAMLA</h1>
+                <h2>Développeur web</h2>
+
+                <div class="languages">
+                    <p>
+                        <i class="fa fa-html5" aria-hidden="true"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-css3" aria-hidden="true"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-wordpress" aria-hidden="true"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-linux" aria-hidden="true"></i>
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="section-two">
+        <div id="my-skills" class="section-two">
+            <div class="skill-title">
+                <h2>Mes compétences</h2>
+            </div>
+
             <div class="skillbar clearfix " data-percent="20%">
                 <div class="skillbar-title"><span>HTML5</span></div>
                 <div class="skillbar-bar"></div>
@@ -89,6 +104,15 @@
                 <div class="skill-bar-percent">50%</div>
             </div>
         </div>
+
+        <div id="my-works" class="section-three">
+            MES REALISATIONS
+        </div>
+
+        <div id="contact" class="section-four">
+            ME CONTACTER
+        </div>
+
     </div>
 
     {#livereload#}

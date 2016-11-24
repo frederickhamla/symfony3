@@ -2,54 +2,36 @@
 @import "mixins/fonts";
 
 .section-one {
-  margin-top: 20px;
-  height: 300px;
-  background-color: @main;
+  height: 100%;
+  margin: 0 auto;
+  background-color: @black;
 
-  .section-img {
-    float: left;
-    height: 280px;
+  .section-presentation {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 40%;
 
-    .img-presentation {
-      border-radius: 50%;
-      margin: 5px;
-      padding-top: 5px;
-      padding-left: 5px;
+    h1 {
+      color: @white;
+      font-size: 4em;
+    }
+
+    h2 {
+      color: @white;
+      padding-top: 30px;
+      font-size: 1.7em;
     }
   }
 
-  .section-presentation {
-    width: 500px;
-    float: left;
+  .languages {
+    padding-top: 120px;
 
-    .txt-presentation {
+    p {
       display: inline-block;
-      vertical-align: text-bottom;
-      height: 100%;
-      padding-top: 10px;
-      padding-left: 10px;
-
-      .firstname {
-        font-family: 'Bevan', cursive;;
-        font-size: 4em;
-        font-weight: 400;
-        font-style: normal;
-        color: @main-ultra-darker;
-      }
-
-      .lastname {
-        margin-top: -15px;
-        font-family: 'Bevan', cursive;;
-        font-size: 3.4em;
-        font-weight: bolder;
-        font-style: normal;
-        color: @green-ultra-darker;
-        .capitalize;
-      }
-
-      p {
-        padding-top: 20px;
-      }
+      margin: 0 45px;
+      color: @blue;
+      font-size: 4em;
     }
   }
 }
@@ -57,16 +39,29 @@
 
 //https://github.com/JustParsa/animated-skills-bar-jquery-css3/blob/master/js/skill-bar.js
 .section-two {
-  height: auto;
-  background-color: @main;
+  height: 100%;
   margin: 20px auto;
-  width: auto;
-  padding: 20px 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 70%;
+
+  .skill-title {
+
+    h2 {
+      font-family: 'Bevan', cursive;;
+      font-size: 2em;
+      font-weight: normal;
+      font-style: normal;
+      color: @black;
+      .capitalize;
+    }
+  }
 
   .skillbar {
     position: relative;
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     width: 75%;
     background: @blue-ultra-lighter;
     height: 35px;
