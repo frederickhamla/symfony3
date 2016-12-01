@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Frédérick KHAMLA</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/styles.css') }}">
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/styles.css') }}">
+    {% endblock %}
 </head>
 <body>
     <div id="navbar" class="sidenav closebtn" onclick="closeNav()">
@@ -109,16 +111,17 @@
             MY WORK
         </div>
 
-        <div id="contact" class="section-four">
-            ME CONTACTER
-        </div>
+        {#Section contact#}
+        {{ include("ShagBundle:Default:form.html.twig") }}
 
     </div>
 
     {#livereload#}
-    <script src="//localhost:35729/livereload.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/0177ad92ba.js"></script>
-    <script src="{{ asset('bundles/shag/js/build.js') }}"></script>
+    {% block javascripts %}
+        <script src="//localhost:35729/livereload.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/0177ad92ba.js"></script>
+        <script src="{{ asset('bundles/shag/js/build.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
