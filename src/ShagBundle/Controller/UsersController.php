@@ -4,18 +4,17 @@ namespace ShagBundle\Controller;
 
 use ShagBundle\Entity\Users;
 use ShagBundle\Form\UsersType;
-use \Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 
 class UsersController extends Controller
 {
     /**
      * @Route("/", name="home")
+     *
      * @param Request $request
+     *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)

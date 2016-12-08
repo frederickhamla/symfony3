@@ -1,7 +1,11 @@
-<div id="contact" class="section-four">
-    <div class="form-contact">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
+<section id="contact" class="section-five">
+    <div class="form-container">
+        <div class="form-contact">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
+        {#section social#}
+        {{ include("ShagBundle:Default:social.html.twig") }}
     </div>
-</div>
+</section>

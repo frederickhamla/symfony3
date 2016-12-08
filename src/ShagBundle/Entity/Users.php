@@ -5,7 +5,7 @@ namespace ShagBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Users
+ * Users.
  *
  * @ORM\Table(name="users")
  * @ORM\Entity(repositoryClass="ShagBundle\Repository\UsersRepository")
@@ -41,9 +41,8 @@ class Users
      */
     private $content;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -51,7 +50,6 @@ class Users
     {
         return $this->id;
     }
-
 
     /**
      * @return mixed

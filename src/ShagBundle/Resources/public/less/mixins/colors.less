@@ -36,3 +36,12 @@
 @grey-blue: #a9a9a9;
 @grey-blue-lighter: #f2f7ff;
 @grey-blue-darker: #e0ecff;
+
+.colorset(@main) {
+  @color-light: lighten(@main, 10%);
+  @color-lighter: lighten(@main, 20%);
+  @color-lightest: lighten(@main, 25%);
+  @color-dark: darken(@main, 10%);
+  @color-darker: darken(@main, 20%);
+  @color-darkest: darken(@main, 25%);
+}

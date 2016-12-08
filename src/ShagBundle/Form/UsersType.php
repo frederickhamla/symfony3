@@ -23,12 +23,10 @@ class UsersType extends AbstractType
                 TextType::class,
                 [
                     'label' => 'Prénom',
-                    'label_attr' =>
-                        [
+                    'label_attr' => [
                             'class' => 'firstname',
                         ],
-                    'attr' =>
-                        [
+                    'attr' => [
                             'placeholder' => 'Prénom',
                         ],
                     'required' => true,
@@ -39,12 +37,10 @@ class UsersType extends AbstractType
                 TextType::class,
                 [
                     'label' => 'Nom',
-                    'label_attr' =>
-                        [
+                    'label_attr' => [
                             'class' => 'lastname',
                         ],
-                    'attr' =>
-                        [
+                    'attr' => [
                             'placeholder' => 'Nom',
                         ],
                     'required' => true,
@@ -55,12 +51,10 @@ class UsersType extends AbstractType
                 EmailType::class,
                 [
                     'label' => 'Email',
-                    'label_attr' =>
-                        [
+                    'label_attr' => [
                             'class' => 'email',
                         ],
-                    'attr' =>
-                        [
+                    'attr' => [
                             'placeholder' => 'Email',
                         ],
                     'required' => true,
@@ -71,13 +65,12 @@ class UsersType extends AbstractType
                 TextareaType::class,
                 [
                     'label' => 'Sujet',
-                    'label_attr' =>
-                        [
+                    'label_attr' => [
                             'class' => 'content',
                         ],
-                    'attr' =>
-                        [
+                    'attr' => [
                             'placeholder' => 'Sujet',
+                            'rows' => '6',
                         ],
                     'required' => true,
                 ]
@@ -86,19 +79,19 @@ class UsersType extends AbstractType
                 'save',
                 SubmitType::class,
                 [
-                    'label' => 'Envoyer'
+                    'label' => 'Envoyer',
                 ]
             )
         ;
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ShagBundle\Entity\Users'
+            'data_class' => 'ShagBundle\Entity\Users',
         ));
     }
 
@@ -109,6 +102,4 @@ class UsersType extends AbstractType
     {
         return 'form_contact';
     }
-
-
 }

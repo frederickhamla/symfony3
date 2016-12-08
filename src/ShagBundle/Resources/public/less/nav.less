@@ -1,45 +1,58 @@
 @import "mixins/colors";
 @import "mixins/fonts";
 @import "mixins/media-queries";
+@import "mixins/li-loop";
+@import "mixins/link-loop";
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
 
 /* The side navigation menu */
 .sidenav {
   height: 100%;
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
-  background-color: @blue;
+  background-color: @main;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
-}
 
-/* The navigation menu links */
-.sidenav a {
-  text-align: center;
-  padding-top: 20px;
-  text-decoration: none;
-  font-size: 25px;
-  color: @white;
-  display: block;
-  transition: 0.3s;
+  ul {
 
-  &:after {
-    margin-top: 20px;
-    display:block;
-    content: '';
-    height:1px;
-    background: @blue-lighter;
-    box-shadow: inset -40px 0px 30px -25px @blue, inset 40px 0px 30px -25px @blue;
+    li {
+      .li-loop(4);
+      height: 10%;
+
+      &.profil {
+        height: 15%;
+        position: relative;
+
+        .about-me {
+          margin: 0 auto;
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 70px;
+          width: 70px;
+          background: url('../images/profil.jpg') no-repeat center center;
+          background-size: 100%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
+      }
+
+      a {
+        .link-loop(4);
+      }
+    }
   }
-
-}
-
-.sidenav a:hover,
-.offcanvas a:focus{
-  color: @white;
 }
 
 /* Position and style the close button (top right corner) */
@@ -51,8 +64,13 @@
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+.next-step {
+  text-align: right;
+
+  .my-arrow {
+    display: inline-block;
+    border-style: solid;
+    border-width: 40px 25px 0 25px;
+    border-color: @white transparent transparent transparent;
+  }
 }

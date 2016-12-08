@@ -10,110 +10,27 @@
     {% endblock %}
 </head>
 <body>
-    <div id="navbar" class="sidenav closebtn" onclick="closeNav()">
-        <ul>
-            <li>
-                <a href="#about-me" data-toggle="tooltip" title="Mais qui es-tu ?">
-                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#my-skills" data-toggle="tooltip" title="Ce que je sais faire">
-                    <i class="fa fa-superpowers" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#my-works" data-toggle="tooltip" title="Mes travaux">
-                    <i class="fa fa-laptop" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#contact" data-toggle="tooltip" title="Me contacter">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
     <div class="main">
         <div class="header">
             <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
         </div>
+        {#Section header - nav#}
+        {{ include("ShagBundle:Default:header.html.twig") }}
 
-        <div id="about-me" class="section-one">
-            <div class="section-presentation">
-                <h1>Frédérick KHAMLA</h1>
-                <h2>Développeur web</h2>
+        {#Section homepage#}
+        {{ include("ShagBundle:Default:homepage.html.twig") }}
 
-                <div class="languages">
-                    <p>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                    </p>
-                    <p>
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </p>
-                    <p>
-                        <i class="fa fa-wordpress" aria-hidden="true"></i>
-                    </p>
-                    <p>
-                        <i class="fa fa-github" aria-hidden="true"></i>
-                    </p>
-                    <p>
-                        <i class="fa fa-linux" aria-hidden="true"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
+        {#Section skills#}
+        {{ include("ShagBundle:Default:skill.html.twig") }}
 
-        <div id="my-skills" class="section-two">
-            <div class="skill-title">
-                <h2>Mes compétences</h2>
-            </div>
+        {#Section my-works#}
+        {{ include("ShagBundle:Default:my-works.html.twig") }}
 
-            <div class="skillbar clearfix " data-percent="20%">
-                <div class="skillbar-title"><span>HTML5</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent">20%</div>
-            </div>
-            <div class="skillbar clearfix " data-percent="50%">
-                <div class="skillbar-title"><span>PHP</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent">50%</div>
-            </div>
-            <div class="skillbar clearfix " data-percent="30%">
-                <div class="skillbar-title"><span>JAVASCRIPT</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent">50%</div>
-            </div>
-            <div class="skillbar clearfix " data-percent="28%">
-                <div class="skillbar-title"><span>SYMFONY</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent">50%</div>
-            </div>
-            <div class="skillbar clearfix " data-percent="66%">
-                <div class="skillbar-title"><span>GIT</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent">50%</div>
-            </div>
-            <div class="skillbar clearfix " data-percent="82%">
-                <div class="skillbar-title"><span>LARAVEL</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent">50%</div>
-            </div>
-            <div class="skillbar clearfix " data-percent="37%">
-                <div class="skillbar-title"><span>WORDPRESS</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent">50%</div>
-            </div>
-        </div>
-
-        <div id="my-works" class="section-three">
-            MY WORK
-        </div>
+        {#Section histoty#}
+        {{ include("ShagBundle:Default:history.html.twig") }}
 
         {#Section contact#}
         {{ include("ShagBundle:Default:form.html.twig") }}
-
     </div>
 
     {#livereload#}
