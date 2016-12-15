@@ -1,0 +1,17 @@
+@import "colors.less";
+
+// loop for image grid in section three "my-works"
+
+@base-url-works: '../images/my-works/';
+
+.grid-loop (@index) when (@index > 0) {
+  .grid-@{index} {
+    background: url('@{base-url-works}grid_@{index}.png') no-repeat center center;
+    display: inline-block;
+    background-size: 100%;
+    margin: 50px;
+  }
+  .grid-loop(@index - 1);
+}
+.grid-loop (1) {}
+.grid-loop(5);

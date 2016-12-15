@@ -1,35 +1,76 @@
 @import "mixins/colors";
 @import "mixins/fonts";
 @import "mixins/media-queries";
+@import "mixins/li-loop";
+@import "mixins/link-loop";
 
-.nav {
-  padding: 0;
-  margin: 150px 0 0 0;
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
   background-color: @main;
-  line-height: 60px;
-  white-space: nowrap;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 
-  ul.nav-inline {
-    list-style: none;
-    text-align: center;
+  ul {
 
     li {
-      border-right: 1px solid @main-lighter;
-      display: inline;
+      .li-loop(4);
+      height: 10%;
 
-      &:first-child {
-        border-left: 1px solid @main-lighter;
+      &.profil {
+        height: 15%;
+        position: relative;
+
+        .about-me {
+          margin: 0 auto;
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 70px;
+          width: 70px;
+          background: url('../images/profil.jpg') no-repeat center center;
+          background-size: 100%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
       }
 
       a {
-        text-decoration: none;
-        margin: 0 100px;
-        .league-main;
-
-        &:hover {
-          color: @main-darker;
-        }
+        .link-loop(4);
       }
     }
+  }
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.next-step {
+  text-align: right;
+
+  .my-arrow {
+    display: inline-block;
+    border-style: solid;
+    border-width: 40px 25px 0 25px;
+    border-color: @white transparent transparent transparent;
   }
 }

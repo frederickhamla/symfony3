@@ -24,12 +24,20 @@
                     separator: ';'
                 },
                 dist: {
-                    src: ['src/ShagBundle/Resources/public/js/skills.js'],
+                    src: [
+                        'src/ShagBundle/Resources/public/js/skills.js',
+                        'src/ShagBundle/Resources/public/js/sidebar.js',
+                        'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                    ],
                     dest: 'bundles/shag/js/build.js'
                 }
             },
             jshint: {
-                files: ['src/ShagBundle/Resources/public/js/skills.js'],
+                files: [
+                    'src/ShagBundle/Resources/public/js/skills.js',
+                    'src/ShagBundle/Resources/public/js/sidebar.js',
+                    'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                ],
                 options: {
                     globals: {
                         jQuery: true,
@@ -40,7 +48,11 @@
             },
             watch: {
                 js : {
-                    files: ['src/ShagBundle/Resources/public/js/skills.js'],
+                    files: [
+                        'src/ShagBundle/Resources/public/js/skills.js',
+                        'src/ShagBundle/Resources/public/js/sidebar.js',
+                        'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                    ],
                     tasks: ['jshint', 'uglify']
                 },
                 less: {
@@ -57,11 +69,14 @@
             uglify: {
                 all: {
                     files: {
-                        'src/ShagBundle/Resources/public/js/build.js': 'src/ShagBundle/Resources/public/js/skills.js'
+                        'src/ShagBundle/Resources/public/js/build.js': [
+                            'src/ShagBundle/Resources/public/js/skills.js',
+                            'src/ShagBundle/Resources/public/js/sidebar.js',
+                            'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                        ]
                     }
                 }
-            },
-
+            }
         });
 
         grunt.registerTask('dev', ['less', 'concat', 'jshint', 'watch']);

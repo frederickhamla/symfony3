@@ -1,135 +1,301 @@
 @import "mixins/colors";
 @import "mixins/fonts";
+@import "mixins/my-works";
 
 .section-one {
-  margin-top: 20px;
-  height: 300px;
-  background-color: @main;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/background/bg_1.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -10;
 
-  .section-img {
-    float: left;
-    height: 280px;
+  .section-presentation {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
 
-    .img-presentation {
-      border-radius: 50%;
-      margin: 5px;
-      padding-top: 5px;
-      padding-left: 5px;
+    h1 {
+      color: @white;
+      font-size: 4em;
+    }
+
+    h2 {
+      color: @white;
+      padding-top: 30px;
+      font-size: 1.7em;
     }
   }
 
-  .section-presentation {
-    width: 500px;
-    float: left;
+  .languages {
+    padding-top: 120px;
 
-    .txt-presentation {
+    p {
       display: inline-block;
-      vertical-align: text-bottom;
-      height: 100%;
-      padding-top: 10px;
-      padding-left: 10px;
-
-      .firstname {
-        font-family: 'Bevan', cursive;;
-        font-size: 4em;
-        font-weight: 400;
-        font-style: normal;
-        color: @main-ultra-darker;
-      }
-
-      .lastname {
-        margin-top: -15px;
-        font-family: 'Bevan', cursive;;
-        font-size: 3.4em;
-        font-weight: bolder;
-        font-style: normal;
-        color: @green-ultra-darker;
-        .capitalize;
-      }
-
-      p {
-        padding-top: 20px;
-      }
+      margin: 0 45px;
+      color: @blue;
+      font-size: 4em;
     }
   }
 }
-
 
 //https://github.com/JustParsa/animated-skills-bar-jquery-css3/blob/master/js/skill-bar.js
 .section-two {
-  height: auto;
-  background-color: @main;
-  margin: 20px auto;
-  width: auto;
-  padding: 20px 0;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../images/background/bg_4.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -10;
+  position: relative;
 
-  .skillbar {
-    position: relative;
-    display: block;
-    margin: 20px auto;
-    width: 75%;
-    background: @blue-ultra-lighter;
-    height: 35px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -webkit-transition: 0.4s linear;
-    -moz-transition: 0.4s linear;
-    -ms-transition: 0.4s linear;
-    -o-transition: 0.4s linear;
-    transition: 0.4s linear;
-    -webkit-transition-property: width, background-color;
-    -moz-transition-property: width, background-color;
-    -ms-transition-property: width, background-color;
-    -o-transition-property: width, background-color;
-    transition-property: width, background-color;
-  }
-
-  .skillbar-title {
+  .content {
     position: absolute;
+    height: 100%;
+    width: 250px;
     top: 0;
-    left: 0;
-    width: 110px;
-    font-weight: bold;
-    font-size: 13px;
-    color: @white;
-    background: @blue;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-bottom-left-radius: 4px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
+    left: 60%;
+    text-align: right;
+    padding: 80px;
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 
-  .skillbar-title span {
-    display: block;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 0 20px;
-    height: 35px;
-    line-height: 35px;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
+    .skill-title {
+      padding-bottom: 70px;
 
-  .skillbar-bar {
-    height: 35px;
-    width: 0;
-    background: @blue-darker;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-  }
+      h2 {
+        font-family: 'Bevan', cursive;
+        font-size: 2em;
+        font-weight: bold;
+        font-style: normal;
+        color: @black;
+        .capitalize;
+      }
+    }
 
-  .skill-bar-percent {
-    position: absolute;
-    right: 3%;
-    top: 0;
-    line-height: 35px;
-    color: @white;
+    .skills-container {
+
+      .skill-content {
+        border-right: 1px solid @black;
+
+        p {
+          font-family: 'Bevan', cursive;
+          font-size: 1.3em;
+          font-weight: normal;
+          margin-right: 15px;
+          .capitalize;
+        }
+      }
+
+      :not(:first-child) {
+        padding-top: 25px;
+      }
+    }
   }
 }
+
+.section-three {
+  height: 100%;
+  width: 100%;
+  background: url(../images/background/bg_9.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -10;
+
+  .grid {
+    position: relative;
+    margin: 0 auto;
+    top: 17%;
+    background: -moz-linear-gradient(-45deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 1%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 1%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 1%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    .section-grid {
+      display: block;
+      width: auto;
+      height: 250px;
+      text-align: center;
+
+      .grid-image {
+        height: 200px;
+        width: 200px;
+
+        .grid-loop(5);
+      }
+    }
+  }
+}
+
+.section-four {
+  height: 100%;
+  background: url(../images/background/bg_7.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -10;
+
+  .timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background: @main;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      background: inherit;
+    }
+    
+    &:nth-child(even) {
+      text-align: right;
+    }
+  }
+
+  .timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 200px;
+    padding: 15px;
+    background: @white;
+
+    time {
+      font-family: 'Bevan', cursive;
+      font-weight: bold;
+      font-size: x-large;
+      color: @main;
+    }
+
+    h1 {
+      font-family: 'quicksand', Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: medium;
+      color: @main-lighter;
+    }
+    
+    p {
+      font-family: 'quicksand', Arial, Helvetica, sans-serif;
+      font-weight: 200;
+      font-size: small;
+    }
+  }
+
+  .timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .timeline ul li:nth-child(odd) div {
+    left: 45px;
+  }
+
+  .timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent @white transparent transparent;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: -320px;
+  }
+
+  .timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent @white;
+  }
+}
+
+.section-five {
+  height: 100%;
+  background: url(../images/background/bg_6.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -10;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+
+  .form-container {
+    width: 100%;
+
+    .form-contact {
+      max-width: 500px;
+      padding: 10px 20px;
+      background: @grey-blue-lighter;
+      margin: 0 auto;
+      border-radius: 8px;
+
+      label {
+        display: none;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea
+      {
+        border: none;
+        outline: 0;
+        padding: 7px;
+        height: 35px;
+        width: 100%;
+        background-color: @grey-blue-darker;
+        color: @grey-blue;
+        margin-bottom: 20px;
+        margin-top: 7px;
+        resize: vertical;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        .form-contact-desktop();
+      }
+
+      textarea {
+        height: inherit;
+      }
+
+      button[type="submit"]
+      {
+        position: relative;
+        display: block;
+        padding: 19px 39px 18px 39px;
+        color: @white;
+        margin: 0 auto;
+        background: @main;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        width: 100%;
+        border: 1px solid @main;
+
+        &:focus,
+        &:active,
+        &:hover
+        {
+          background: @main-darker;
+        }
+      }
+    }
+  }
+}
+

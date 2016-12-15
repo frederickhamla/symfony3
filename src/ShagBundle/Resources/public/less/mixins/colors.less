@@ -31,3 +31,17 @@
 @black: #03030A;
 @white: #fff;
 @dark-blue: 000033;
+
+//grey form-contact - http://paletton.com/#uid=73i0u0k00q500++00Lw06gV3D4L
+@grey-blue: #a9a9a9;
+@grey-blue-lighter: #f2f7ff;
+@grey-blue-darker: #e0ecff;
+
+.colorset(@main) {
+  @color-light: lighten(@main, 10%);
+  @color-lighter: lighten(@main, 20%);
+  @color-lightest: lighten(@main, 25%);
+  @color-dark: darken(@main, 10%);
+  @color-darker: darken(@main, 20%);
+  @color-darkest: darken(@main, 25%);
+}

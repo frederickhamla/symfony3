@@ -1,0 +1,37 @@
+@import "colors.less";
+
+// loop foreach <li>
+.li-loop (@index) when (@index > 0) {
+  .link-@{index} {
+    height: 120px;
+    opacity: 1;
+  }
+  .li-loop(@index - 1);
+}
+.li-loop (1) {}
+.li-loop(5);
+
+.link-1 {
+  .colorset(@main);
+  background-color: @color-darkest;
+}
+
+.link-2 {
+  .colorset(@main);
+  background-color: @color-darker;
+}
+
+.link-3 {
+  .colorset(@main);
+  background-color: @color-light;
+}
+
+.link-4 {
+  .colorset(@main);
+  background-color: @color-lighter;
+}
+
+.link-5 {
+  .colorset(@main);
+  background-color: @color-lightest;
+}
