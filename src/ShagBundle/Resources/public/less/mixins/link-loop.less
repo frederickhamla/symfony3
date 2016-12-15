@@ -1,0 +1,28 @@
+@import "colors.less";
+
+// loop foreach <a>
+
+@base-url: '../images/nav/';
+
+.link-loop (@index) when (@index > 0) {
+  .picto-@{index} {
+    background: url('@{base-url}icon-@{index}.png') no-repeat center center;
+    background-size: 15%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  .link-loop(@index - 1);
+}
+.link-loop (1) {}
+.link-loop(5);

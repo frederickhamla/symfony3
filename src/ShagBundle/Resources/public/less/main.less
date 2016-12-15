@@ -1,7 +1,28 @@
-body {
-  background: url(../images/bg_homepage.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html, body {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  -webkit-transition: margin-left .5s;
+  -moz-transition: margin-left .5s;
+  -ms-transition: margin-left .5s;
+  -o-transition: margin-left .5s;
+  transition: margin-left .5s;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  .main {
+    -webkit-transition: margin-left .5s;
+    -moz-transition: margin-left .5s;
+    -ms-transition: margin-left .5s;
+    -o-transition: margin-left .5s;
+    transition: margin-left .5s;
+    padding-right: 17px; /* This hides the right scrollbar */
+    padding-bottom: 17px; /* This hides the bottom scrollbar */
+  }
+
+  .main::-webkit-scrollbar {
+    display: none;
+  }
 }

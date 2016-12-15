@@ -1,19 +1,44 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Frédérick KHAMLA</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/main.css') }}">
-
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/styles.css') }}">
+    {% endblock %}
 </head>
 <body>
-    <div class="test">
-        MENU
+    <div class="main">
+        <div class="header">
+            <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
+        </div>
+        {#Section header - nav#}
+        {{ include("ShagBundle:Default:header.html.twig") }}
+
+        {#Section homepage#}
+        {{ include("ShagBundle:Default:homepage.html.twig") }}
+
+        {#Section skills#}
+        {{ include("ShagBundle:Default:skill.html.twig") }}
+
+        {#Section my-works#}
+        {{ include("ShagBundle:Default:my-works.html.twig") }}
+
+        {#Section histoty#}
+        {{ include("ShagBundle:Default:history.html.twig") }}
+
+        {#Section contact#}
+        {{ include("ShagBundle:Default:form.html.twig") }}
     </div>
 
-    <script src="//localhost:35729/livereload.js"></script>
+    {#livereload#}
+    {% block javascripts %}
+        <script src="//localhost:35729/livereload.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/0177ad92ba.js"></script>
+        <script src="{{ asset('bundles/shag/js/build.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
