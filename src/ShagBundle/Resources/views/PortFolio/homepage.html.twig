@@ -1,4 +1,10 @@
 <section id="homepage" class="section-one">
+    {% for flash_message in app.session.flashBag.get('success') %}
+        <div class="flash-success">
+            <p>{{ flash_message }}</p>
+        </div>
+    {% endfor %}
+
     <div class="section-presentation">
         <h1>Frédérick KHAMLA</h1>
         <h2>Développeur web</h2>

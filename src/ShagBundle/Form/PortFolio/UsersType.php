@@ -61,15 +61,29 @@ class UsersType extends AbstractType
                 ]
             )
             ->add(
-                'content',
-                TextareaType::class,
+                'subject',
+                TextType::class,
                 [
                     'label' => 'Sujet',
                     'label_attr' => [
-                            'class' => 'content',
+                        'class' => 'subject',
+                    ],
+                    'attr' => [
+                        'placeholder' => 'Sujet',
+                    ],
+                    'required' => true,
+                ]
+            )
+            ->add(
+                'content',
+                TextareaType::class,
+                [
+                    'label' => 'Message',
+                    'label_attr' => [
+                            'class' => 'Message',
                         ],
                     'attr' => [
-                            'placeholder' => 'Sujet',
+                            'placeholder' => 'Message',
                             'rows' => '6',
                         ],
                     'required' => true,
