@@ -9,30 +9,42 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 class UsersController extends Controller
+
 {
     /**
      * @Route("/", name="home")
      *
      * @param Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)
     {
         $contact = new Users();
 
         $form = $this->createForm(UsersType::class, $contact);
-
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $contact = $form->getData();
+        if ('POST' === $request->getMethod()) {
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
-            $em->flush();
+            if ($form->isSubmitted() &&$form->isValid()) {
 
-            return $this->redirectToRoute('home');
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($form->getData());
+                $em->flush();
+
+                $this->addFlash('success', 'Merci, votre mail à bien été envoyé !');
+
+                $this->get('app.mailer')
+                    ->sendMessage(
+                        $form->get('email'),
+                        $form->get('subject'),
+                        $form->get('content')
+                    )
+                ;
+
+                return $this->redirectToRoute('home');
+            }
+
         }
 
         return $this->render('ShagBundle:PortFolio:index.html.twig', [
