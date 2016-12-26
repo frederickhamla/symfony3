@@ -30,3 +30,6 @@ $('a[href*="#"]:not([href="#"])').click(function() {
         }
     }
 });
+;setTimeout(function() {
+    $('.flash-success').fadeOut('fast');
+}, 3000);

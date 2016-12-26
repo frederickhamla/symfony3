@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Users.
  *
  * @ORM\Table(name="users")
- * @ORM\Entity(repositoryClass="ShagBundle\Repository\UsersRepository")
+ * @ORM\Entity(repositoryClass="ShagBundle\Repository\PortFolio\UsersRepository")
  */
 class Users
 {
@@ -40,6 +40,11 @@ class Users
      * @ORM\Column(type="text")
      */
     private $content;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $subject;
 
     /**
      * Get id.
@@ -113,5 +118,21 @@ class Users
     public function setContent($content)
     {
         $this->content = $content;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * @param mixed $subject
+     */
+    public function setSubject($subject)
+    {
+        $this->subject = $subject;
     }
 }

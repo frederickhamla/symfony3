@@ -1,0 +1,4 @@
+services:
+    app.mailer:
+        class: ShagBundle\Utils\SendMail
+        arguments: ['@mailer']
