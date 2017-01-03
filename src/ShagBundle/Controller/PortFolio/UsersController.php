@@ -1,9 +1,9 @@
 <?php
 
-namespace ShagBundle\Controller;
+namespace ShagBundle\Controller\PortFolio;
 
-use ShagBundle\Entity\Users;
-use ShagBundle\Form\UsersType;
+use ShagBundle\Entity\PortFolio\Users;
+use ShagBundle\Form\PortFolio\UsersType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,7 +35,7 @@ class UsersController extends Controller
             return $this->redirectToRoute('home');
         }
 
-        return $this->render('ShagBundle:Default:index.html.twig', [
+        return $this->render('ShagBundle:PortFolio:index.html.twig', [
             'form' => $form->createView(),
         ]);
     }
