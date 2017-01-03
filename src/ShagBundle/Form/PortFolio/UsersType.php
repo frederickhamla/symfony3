@@ -1,6 +1,6 @@
 <?php
 
-namespace ShagBundle\Form;
+namespace ShagBundle\Form\PortFolio;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -91,7 +91,7 @@ class UsersType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ShagBundle\Entity\Users',
+            'data_class' => 'ShagBundle\Entity\PortFolio\Users',
         ));
     }
 

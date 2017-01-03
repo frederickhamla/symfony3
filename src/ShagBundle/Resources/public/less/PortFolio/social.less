@@ -1,0 +1,47 @@
+@import "../mixins/colors";
+
+.social {
+  position: relative;
+  width: auto;
+  height: auto;
+  text-align: center;
+
+  .social-round {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 30px;
+  }
+
+  .profil-viadeo {
+    background: @white url(../images/social/viadeo_nb.png) no-repeat center center;
+    background-size: 100%;
+
+    &:hover {
+      background: @white url(../images/social/viadeo_rgb.png) no-repeat center center;
+      background-size: 100%;
+    }
+  }
+
+  .profil-linkedin {
+    background: @white url(../images/social/linkedin_nb.png) no-repeat center center;
+    background-size: 70%;
+
+    &:hover {
+      background: @white url(../images/social/linkedin_rgb.png) no-repeat center center;
+      background-size: 70%;
+    }
+  }
+
+  .profil-github {
+    background: @white url(../images/social/github_nb.png) no-repeat center center;
+    background-size: 70%;
+
+    &:hover {
+      background: @white url(../images/social/github_rgb.png) no-repeat center center;
+      background-size: 70%;
+    }
+  }
+}

@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Frédérick KHAMLA</title>
+    <title>{% block title %}Frédérick KHAMLA{% endblock %}</title>
 
     {% block stylesheets %}
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/styles.css') }}">
@@ -15,22 +15,22 @@
             <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
         </div>
         {#Section header - nav#}
-        {{ include("ShagBundle:Default:header.html.twig") }}
+        {{ include("ShagBundle:PortFolio:header.html.twig") }}
 
         {#Section homepage#}
-        {{ include("ShagBundle:Default:homepage.html.twig") }}
+        {{ include("ShagBundle:PortFolio:homepage.html.twig") }}
 
         {#Section skills#}
-        {{ include("ShagBundle:Default:skill.html.twig") }}
+        {{ include("ShagBundle:PortFolio:skill.html.twig") }}
 
         {#Section my-works#}
-        {{ include("ShagBundle:Default:my-works.html.twig") }}
+        {{ include("ShagBundle:PortFolio:my-works.html.twig") }}
 
         {#Section histoty#}
-        {{ include("ShagBundle:Default:history.html.twig") }}
+        {{ include("ShagBundle:PortFolio:history.html.twig") }}
 
         {#Section contact#}
-        {{ include("ShagBundle:Default:form.html.twig") }}
+        {{ include("ShagBundle:PortFolio:form.html.twig") }}
     </div>
 
     {#livereload#}

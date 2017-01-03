@@ -1,6 +1,6 @@
 <?php
 
-namespace ShagBundle\Entity;
+namespace ShagBundle\Entity\PortFolio;
 
 use Doctrine\ORM\Mapping as ORM;
 

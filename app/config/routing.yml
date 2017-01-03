@@ -1,4 +1,4 @@
 shag:
-    resource: "@ShagBundle/Controller/"
+    resource: "@ShagBundle/Controller/PortFolio"
     type:     annotation
     prefix:   /

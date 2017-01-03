@@ -1,6 +1,6 @@
 <?php
 
-namespace ShagBundle\Repository;
+namespace ShagBundle\Repository\PortFolio;
 
 use Doctrine\ORM\EntityRepository;
 
