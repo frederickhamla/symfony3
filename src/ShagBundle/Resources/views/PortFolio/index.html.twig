@@ -1,44 +1,44 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}Frédérick KHAMLA{% endblock %}</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}Frédérick KHAMLA{% endblock %}</title>
 
-    {% block stylesheets %}
-        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/styles.css') }}">
-    {% endblock %}
-</head>
-<body>
-    <div class="main">
-        <div class="header">
-            <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
-        </div>
-        {#Section header - nav#}
-        {{ include("ShagBundle:PortFolio:header.html.twig") }}
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/shag/css/styles.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <section class="main">
+            <div class="header">
+                <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
+            </div>
+            {#Section header - nav#}
+            {{ include("ShagBundle:PortFolio:header.html.twig") }}
 
-        {#Section homepage#}
-        {{ include("ShagBundle:PortFolio:homepage.html.twig") }}
+            {#Section homepage#}
+            {{ include("ShagBundle:PortFolio:homepage.html.twig") }}
 
-        {#Section skills#}
-        {{ include("ShagBundle:PortFolio:skill.html.twig") }}
+            {#Section skills#}
+            {{ include("ShagBundle:PortFolio:skill.html.twig") }}
 
-        {#Section my-works#}
-        {{ include("ShagBundle:PortFolio:my-works.html.twig") }}
+            {#Section my-works#}
+            {{ include("ShagBundle:PortFolio:my-works.html.twig") }}
 
-        {#Section history#}
-        {{ include("ShagBundle:PortFolio:history.html.twig") }}
+            {#Section history#}
+            {{ include("ShagBundle:PortFolio:history.html.twig") }}
 
-        {#Section contact#}
-        {{ include("ShagBundle:PortFolio:form.html.twig") }}
-    </div>
+            {#Section contact#}
+            {{ include("ShagBundle:PortFolio:form.html.twig") }}
+        </section>
 
-    {#livereload#}
-    {% block javascripts %}
-        <script src="//localhost:35729/livereload.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://use.fontawesome.com/0177ad92ba.js"></script>
-        <script src="{{ asset('bundles/shag/js/build.js') }}"></script>
-    {% endblock %}
-</body>
+        {#livereload#}
+        {% block javascripts %}
+            <script src="//localhost:35729/livereload.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://use.fontawesome.com/0177ad92ba.js"></script>
+            <script src="{{ asset('bundles/shag/js/build.js') }}"></script>
+        {% endblock %}
+    </body>
 </html>

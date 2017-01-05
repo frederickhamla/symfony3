@@ -2,3 +2,7 @@ shag:
     resource: "@ShagBundle/Controller/PortFolio"
     type:     annotation
     prefix:   /
+
+shag_blog_front:
+  resource: "@ShagBundle/Controller/Front"
+  type:     annotation
