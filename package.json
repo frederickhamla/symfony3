@@ -19,6 +19,7 @@
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-phpunit": "^0.3.6",
     "jit-grunt": "^0.10.0"
   }
 }
