@@ -5,12 +5,12 @@ namespace ShagBundle\Entity\PortFolio;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Users.
+ * Contact.
  *
- * @ORM\Table(name="users")
- * @ORM\Entity(repositoryClass="ShagBundle\Repository\PortFolio\UsersRepository")
+ * @ORM\Table(name="contact")
+ * @ORM\Entity(repositoryClass="ShagBundle\Repository\PortFolio\ContactRepository")
  */
-class Users
+class Contact
 {
     /**
      * @var int

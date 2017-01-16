@@ -2,13 +2,13 @@
 
 namespace ShagBundle\Controller\PortFolio;
 
-use ShagBundle\Entity\PortFolio\Users;
-use ShagBundle\Form\PortFolio\UsersType;
+use ShagBundle\Entity\PortFolio\Contact;
+use ShagBundle\Form\PortFolio\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
-class UsersController extends Controller
+class ContactController extends Controller
 
 {
     /**
@@ -19,9 +19,9 @@ class UsersController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $contact = new Users();
+        $contact = new Contact();
 
-        $form = $this->createForm(UsersType::class, $contact);
+        $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
 
         if ('POST' === $request->getMethod()) {
@@ -32,6 +32,7 @@ class UsersController extends Controller
                 $em->persist($form->getData());
                 $em->flush();
 
+                //TODO add translations
                 $this->addFlash('success', 'Merci, votre mail à bien été envoyé !');
 
                 $this->get('app.mailer')
