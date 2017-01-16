@@ -27,7 +27,8 @@
                     src: [
                         'src/ShagBundle/Resources/public/js/skills.js',
                         'src/ShagBundle/Resources/public/js/sidebar.js',
-                        'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                        'src/ShagBundle/Resources/public/js/smooth-scroll.js',
+                        'src/ShagBundle/Resources/public/js/flash-message.js'
                     ],
                     dest: 'bundles/shag/js/build.js'
                 }
@@ -36,7 +37,8 @@
                 files: [
                     'src/ShagBundle/Resources/public/js/skills.js',
                     'src/ShagBundle/Resources/public/js/sidebar.js',
-                    'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                    'src/ShagBundle/Resources/public/js/smooth-scroll.js',
+                    'src/ShagBundle/Resources/public/js/flash-message.js'
                 ],
                 options: {
                     globals: {
@@ -51,7 +53,8 @@
                     files: [
                         'src/ShagBundle/Resources/public/js/skills.js',
                         'src/ShagBundle/Resources/public/js/sidebar.js',
-                        'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                        'src/ShagBundle/Resources/public/js/smooth-scroll.js',
+                        'src/ShagBundle/Resources/public/js/flash-message.js'
                     ],
                     tasks: ['jshint', 'uglify']
                 },
@@ -72,7 +75,8 @@
                         'src/ShagBundle/Resources/public/js/build.js': [
                             'src/ShagBundle/Resources/public/js/skills.js',
                             'src/ShagBundle/Resources/public/js/sidebar.js',
-                            'src/ShagBundle/Resources/public/js/smooth-scroll.js'
+                            'src/ShagBundle/Resources/public/js/smooth-scroll.js',
+                            'src/ShagBundle/Resources/public/js/flash-message.js'
                         ]
                     }
                 }
