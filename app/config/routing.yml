@@ -1,4 +1,21 @@
+
 shag:
-    resource: "@ShagBundle/Controller/PortFolio"
+    resource: "@ShagBundle/Controller/PortFolio/ContactController.php"
     type:     annotation
     prefix:   /
+
+shag_users:
+    resource: "@ShagBundle/Controller/Blog/UsersController.php"
+    type:     annotation
+
+shag_blog:
+    resource: "@ShagBundle/Controller/Blog/PostsController.php"
+    type:     annotation
+
+shag_blog_login:
+    resource: "@ShagBundle/Controller/Blog/LoginController.php"
+    type:     annotation
+
+shag_blog_registration:
+    resource: "@ShagBundle/Controller/Blog/RegistrationController.php"
+    type:     annotation
